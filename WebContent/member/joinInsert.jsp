@@ -26,7 +26,7 @@
 			    	<h3 class="panel-title">회원가입</h3>
 			 	</div>
 			  	<div class="panel-body">
-			    	<form accept-charset="UTF-8" role="form">
+			    	<form accept-charset="UTF-8" role="form" action="../member.do?command=member_join" method="post">
 			    	 
                     <fieldset class="Edit-text">
 			    	  	<div class="form-group">
@@ -39,7 +39,7 @@
 			    			패스워드 확인(*)  <input class="form-control" placeholder="PassWord" name="password" type="password" value="">
 			    		</div>
 			    		<div class="form-group">
-			    		     닉네임  <input class="form-control" placeholder="nicName" name="email" type="text">
+			    		     닉네임  <input class="form-control" placeholder="nickName" name="email" type="text">
 			    		</div>
 			    		
 			    		<div class="form-group">
@@ -53,6 +53,7 @@
                 <input id="agree" type="checkbox" autocomplete="off" chacked>
                <a href="#">이용약관</a> 에 동의 합니다.
 			    	    </div>
+			    	  <!--   <input type="hidden" name="command" value="member_join" /> -->
 			    		<input class="btn btn-lg btn-success btn-block" type="submit" value="join us">
 			    	</fieldset>
 			    	

@@ -9,6 +9,9 @@ import com.fishing.controller.action.CommunityUpdateFormAction;
 import com.fishing.controller.action.CommunityViewAction;
 import com.fishing.controller.action.CommunityWriteAction;
 import com.fishing.controller.action.CommunityWriteFormAction;
+import com.fishing.member.action.MemberJoinAction;
+import com.fishing.member.action.MemberJoinFormAction;
+import com.fishing.member.action.MemberLoginAction;
 import com.fishing.controller.ActionFactory;
 
 
@@ -47,6 +50,12 @@ public class ActionFactory {
 			action = new CommunityUpdateAction();
 		}else if(command.equals("community_view")){
 			action = new CommunityViewAction();
+		}else if(command.equals("member_login")){
+			action = new MemberLoginAction();
+		}else if(command.equals("member_join")){
+			action = new MemberJoinAction();
+		}else if(command.equals("member_join_form")){
+			action = new MemberJoinFormAction();
 		}
 		
 		return action;

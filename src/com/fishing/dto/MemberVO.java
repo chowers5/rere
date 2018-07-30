@@ -3,121 +3,105 @@ package com.fishing.dto;
 public class MemberVO {
     private String id;
     private String pw;
-    private String name;
     private String email;
     private String nickName;
     private String birthday;
     private String phone;
     private String addr;
+    private int isDelete;
+
     
    
     public MemberVO() {
-		
-	}
+      
+   }
 
 
-	public MemberVO(String id, String pw, String name, String email, String nickName, String birthday, String phone,
-			String addr) {
-		
-		this.id = id;
-		this.pw = pw;
-		this.name = name;
-		this.email = email;
-		this.nickName = nickName;
-		this.birthday = birthday;
-		this.phone = phone;
-		this.addr = addr;
-	}
+   public String getId() {
+      return id;
+   }
 
 
-	public String getId() {
-		return id;
-	}
+   public void setId(String id) {
+      this.id = id;
+   }
 
 
-	public void setId(String id) {
-		this.id = id;
-	}
+   public String getPw() {
+      return pw;
+   }
 
 
-	public String getPw() {
-		return pw;
-	}
+   public void setPw(String pw) {
+      this.pw = pw;
+   }
+
+   public String getEmail() {
+      return email;
+   }
 
 
-	public void setPw(String pw) {
-		this.pw = pw;
-	}
+   public void setEmail(String email) {
+      this.email = email;
+   }
 
 
-	public String getName() {
-		return name;
-	}
+   public String getNickName() {
+      return nickName;
+   }
 
 
-	public void setName(String name) {
-		this.name = name;
-	}
+   public void setNickName(String nickName) {
+      this.nickName = nickName;
+   }
 
 
-	public String getEmail() {
-		return email;
-	}
+   public String getBirthday() {
+      return birthday;
+   }
 
 
-	public void setEmail(String email) {
-		this.email = email;
-	}
+   public void setBirthday(String birthday) {
+      this.birthday = birthday;
+   }
 
 
-	public String getNickName() {
-		return nickName;
-	}
+   public String getPhone() {
+      return phone;
+   }
 
 
-	public void setNickName(String nickName) {
-		this.nickName = nickName;
-	}
+   public void setPhone(String phone) {
+      this.phone = phone;
+   }
 
 
-	public String getBirthday() {
-		return birthday;
-	}
+   public String getAddr() {
+      return addr;
+   }
 
 
-	public void setBirthday(String birthday) {
-		this.birthday = birthday;
-	}
+   public void setAddr(String addr) {
+      this.addr = addr;
+   }
 
 
-	public String getPhone() {
-		return phone;
-	}
+@Override
+public String toString() {
+	return "MemberVO [id=" + id + ", pw=" + pw + ", email=" + email + ", nickName=" + nickName + ", birthday="
+			+ birthday + ", phone=" + phone + ", addr=" + addr + ", isDelete=" + isDelete + "]";
+}
 
 
-	public void setPhone(String phone) {
-		this.phone = phone;
-	}
+   
 
 
-	public String getAddr() {
-		return addr;
-	}
+   
+   
 
 
-	public void setAddr(String addr) {
-		this.addr = addr;
-	}
 
-
-	@Override
-	public String toString() {
-		return "MemberVO [id=" + id + ", pw=" + pw + ", name=" + name + ", email=" + email + ", nickName=" + nickName
-				+ ", birthday=" + birthday + ", phone=" + phone + ", addr=" + addr + "]";
-	}
-
-
-	
+   
     
     
   

@@ -14,35 +14,43 @@ import com.fishing.dto.MemberVO;
 
 public class MemberLoginAction implements Action {
 
-	@Override
-	public void excute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
-		   request.setCharacterEncoding("UTF-8");
-		   
-		   String command = request.getParameter("command");
-	      String id = request.getParameter("id");
-	      String pw = request.getParameter("pw");
-	      MemberVO mvo = new MemberVO();
-	      HttpSession session = request.getSession();
-	      MemberDao mdao = MemberDao.getInstance();
-	      mvo.setId(id);
-	      mvo.setPw(pw);
-	      PrintWriter w = response.getWriter();
-	    
-	      if(mdao.login(mvo)){
-	         session.setAttribute("login",mvo);
-	            w.print("<script>");
-	            w.print("alert('loginSuccess!!');");
-	            w.print("location.href='index.jsp';");
-	            w.print("</script>");
-	         
-	      }else{
-	         System.out.println("로그인실패");
-	         w.print("<script>");
-	            w.print("alert('Login Fail!');");
-	            w.print("location.href='member/loginForm.jsp';");
-	            w.print("</script>");
-	      }
-	}
+   @Override
+   public void excute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+      
+      String command = request.getParameter("command");
+      request.setCharacterEncoding("UTF-8");
+     
+      HttpSession session = request.getSession();
+      MemberVO mvo = new MemberVO();
+      
+      
+      String id = request.getParameter("id");
+      String pw = request.getParameter("pw");
+      
+      
+      MemberDao mdao = MemberDao.getInstance();
+      mvo.setId(id);
+      mvo.setPw(pw);
+      PrintWriter w = response.getWriter();
+    
+      
+      
+      if(mdao.login(mvo) != null){
+        
+         session.setAttribute("login",mvo);
+            w.print("<script>");
+            w.print("alert('loginSuccess!!');");
+            w.print("location.href='index.jsp';");
+            w.print("</script>");
+         
+      }else{
+         response.setContentType("text/html;charset=utf-8");
+         System.out.println("loginFail");
+         w.print("<script>");
+            w.print("alert('Login Fail!');");
+            w.print("location.href='member/loginForm.jsp';");
+            w.print("</script>");
+      }
+   }
 
 }

@@ -14,7 +14,7 @@ import com.fishing.controller.action.Action;
 /**
  * Servlet implementation class CommunityServlet
  */
-@WebServlet({"/CommunityServlet", "/community.do","/member.do"})
+@WebServlet({"/FishingServlet", "/fishing.do","/member.do", "/community.do"})
 public class FishingServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        

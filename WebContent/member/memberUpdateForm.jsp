@@ -16,8 +16,8 @@
 	아이디 : <input type = "text" name = "id"
 	value="<%=member.getId() %>"><br>
 	비 번 : <input type = "password" name = "pw"><br>
-	이 름 : <input type = "text" name = "name"
-	value="<%=member.getName() %>"><br>
+	<%-- 이 름 : <input type = "text" name = "name"
+	value="<%=member.getName() %>"><br> --%>
 	이메일 : <input type = "text" name = "email"
 	value="<%=member.getEmail() %>"><br>
 	<input type="submit" value="수정하기">
